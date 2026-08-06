@@ -1,7 +1,7 @@
 (function () {
   var T = {
     en: {
-      meta: { title: "Chat Organizer for Claude & ChatGPT: Auto-Sort Chats | Free Chrome Extension", description: "Chat Organizer auto-sorts your Claude and ChatGPT chats into projects in one click. Free Chrome extension, no API key needed." },
+      meta: { title: "AI Chat Organizer for Claude & ChatGPT – Free Chrome Extension", description: "The free AI chat organizer for Claude and ChatGPT. Auto-sorts hundreds of chats into projects in one click. Chrome extension, no API key, nothing deleted." },
       nav:  { cta: "Add to Chrome" },
       hero: { badge: "Free Chrome Extension", h1: "Your Claude &amp; ChatGPT chats,<br><em>finally organized</em>", sub: "Hundreds of chats and zero order? Chat Organizer is the AI chat organizer that scans them all, builds a plan, and moves every Claude and ChatGPT chat into projects in one click.", stars: "Loved by Claude and ChatGPT power users", cta: "Add to Chrome, it’s free", note1: "No API key required", note2: "No account needed", note3: "Works in seconds" },
       stats: { v1: "Free", l1: "No subscription ever", l2: "Chat topics recognized", l3: "Built-in categories", l4: "Full organize run" },
@@ -33,6 +33,7 @@
     },
 
     nl: {
+      meta: { title: "Chat Organizer: Claude- en ChatGPT-chats automatisch ordenen", description: "Chat Organizer ordent je Claude- en ChatGPT-chats met een klik in projecten. Gratis Chrome-extensie, geen API-sleutel en geen account nodig." },
       nav:  { cta: "Toevoegen aan Chrome" },
       hero: { badge: "Gratis Chrome-extensie", h1: "Jouw Claude- en ChatGPT-chats,<br><em>eindelijk georganiseerd</em>", sub: "Honderden chats en geen overzicht? Chat Organizer scant ze allemaal, maakt een plan en verplaatst alles naar projecten met een klik.", stars: "Geliefd bij Claude-gebruikers", cta: "Toevoegen aan Chrome, gratis", note1: "Geen API-sleutel nodig", note2: "Geen account nodig", note3: "Klaar in seconden" },
       stats: { v1: "Gratis", l1: "Nooit een abonnement", l2: "Chatonderwerpen herkend", l3: "Ingebouwde categorieën", l4: "Volledig organiseren" },
@@ -64,7 +65,7 @@
     },
 
     fr: {
-      meta: { title: "Organisateur de Chats IA pour Claude : Triez vos Chats | Extension Chrome Gratuite", description: "L'organisateur et gestionnaire de chats IA pour Claude.ai. Triez des centaines de chats Claude dans des projets en un clic. Extension Chrome gratuite, sans clé API." },
+      meta: { title: "Organiser les chats ChatGPT et Claude | Extension gratuite", description: "Chat Organizer trie automatiquement vos chats Claude et ChatGPT dans des projets en un clic. Extension Chrome gratuite, sans clé API ni compte." },
       nav:  { cta: "Ajouter à Chrome" },
       hero: { badge: "Extension Chrome gratuite", h1: "Vos chats Claude et ChatGPT,<br><em>enfin organisés</em>", sub: "Des centaines de chats sans ordre? Chat Organizer les analyse, crée un plan et déplace tout dans des projets en un clic.", stars: "Adoré par les utilisateurs Claude", cta: "Ajouter à Chrome, gratuit", note1: "Aucune clé API requise", note2: "Aucun compte nécessaire", note3: "Prêt en quelques secondes" },
       stats: { v1: "Gratuit", l1: "Jamais d’abonnement", l2: "Sujets de chat reconnus", l3: "Catégories intégrées", l4: "Organisation complète" },
@@ -96,7 +97,7 @@
     },
 
     de: {
-      meta: { title: "KI Chat-Organizer für Claude: Chats automatisch sortieren | Kostenlose Chrome-Erweiterung", description: "Der KI-Chat-Organizer und Chat-Manager für Claude.ai. Hunderte Claude-Chats mit einem Klick in Projekte sortieren. Kostenlose Chrome-Erweiterung, kein API-Schlüssel nötig." },
+      meta: { title: "ChatGPT- und Claude-Chats sortieren | Kostenlose Erweiterung", description: "Chat Organizer sortiert deine Claude- und ChatGPT-Chats mit einem Klick in Projekte. Kostenlose Chrome-Erweiterung, ohne API-Schlüssel und Konto." },
       nav:  { cta: "Zu Chrome hinzufügen" },
       hero: { badge: "Kostenlose Chrome-Erweiterung", h1: "Deine Claude- und ChatGPT-Chats,<br><em>endlich organisiert</em>", sub: "Hunderte Chats ohne Ordnung? Chat Organizer scannt alles, erstellt einen Plan und verschiebt alles in Projekte mit einem Klick.", stars: "Geliebt von Claude-Nutzern", cta: "Zu Chrome hinzufügen, kostenlos", note1: "Kein API-Schlüssel nötig", note2: "Kein Konto nötig", note3: "Fertig in Sekunden" },
       stats: { v1: "Kostenlos", l1: "Kein Abonnement jemals", l2: "Chat-Themen erkannt", l3: "Eingebaute Kategorien", l4: "Vollständige Organisation" },
@@ -128,7 +129,7 @@
     },
 
     es: {
-      meta: { title: "Organizador de Chats con IA para Claude: Gratis en Chrome", description: "Organiza cientos de chats de Claude.ai en proyectos con un solo clic. Extensión de Chrome gratis, sin clave API ni cuenta. Pon orden en tus chats en segundos." },
+      meta: { title: "Organizar chats de ChatGPT y Claude | Extensión gratuita", description: "Chat Organizer ordena automáticamente tus chats de Claude y ChatGPT en proyectos con un clic. Extensión de Chrome gratis, sin clave API ni cuenta." },
       nav:  { cta: "Añadir a Chrome" },
       hero: { badge: "Extensión de Chrome gratuita", h1: "Tus chats de Claude y ChatGPT,<br><em>por fin organizados</em>", sub: "¿Cientos de chats sin orden? Chat Organizer los analiza, crea un plan y mueve todo a proyectos con un clic.", stars: "Amado por los usuarios de Claude", cta: "Añadir a Chrome, es gratis", note1: "Sin clave API", note2: "Sin cuenta requerida", note3: "Listo en segundos" },
       stats: { v1: "Gratis", l1: "Nunca una suscripción", l2: "Temas de chat reconocidos", l3: "Categorías integradas", l4: "Organización completa" },
@@ -160,6 +161,7 @@
     },
 
     zh: {
+      meta: { title: "整理 ChatGPT 和 Claude 聊天记录 | 免费 Chrome 扩展程序", description: "Chat Organizer 一键将您的 Claude 和 ChatGPT 聊天自动归类到项目中。免费 Chrome 扩展程序，无需 API 密钥，无需账户，不会删除任何聊天。" },
       nav:  { cta: "添加到 Chrome" },
       hero: { badge: "免费 Chrome 扩展", h1: "你的 Claude 和 ChatGPT 对话，<br><em>终于井然有序</em>", sub: "数百个对话毫无条理？Chat Organizer 扫描全部对话，制定计划，一键将所有内容移入项目。", stars: "深受 Claude 用户喜爱", cta: "添加到 Chrome，免费", note1: "无需 API 密钥", note2: "无需注册账号", note3: "几秒即可完成" },
       stats: { v1: "免费", l1: "永久无需订阅", l2: "可识别的对话主题", l3: "内置分类", l4: "完整整理一次" },
@@ -191,6 +193,7 @@
     },
 
     pt: {
+      meta: { title: "Organizar conversas do ChatGPT e Claude | Extensão gratuita", description: "O Chat Organizer organiza as suas conversas do Claude e do ChatGPT em projetos com um clique. Extensão gratuita para Chrome, sem chave de API." },
       nav:  { cta: "Adicionar ao Chrome" },
       hero: { badge: "Extensão gratuita para Chrome", h1: "Seus chats do Claude e ChatGPT,<br><em>finalmente organizados</em>", sub: "Centenas de chats sem ordem? Chat Organizer escaneia todos, cria um plano e move tudo para projetos em um clique.", stars: "Adorado pelos usuários do Claude", cta: "Adicionar ao Chrome, de graça", note1: "Sem chave de API", note2: "Sem conta necessária", note3: "Pronto em segundos" },
       stats: { v1: "Grátis", l1: "Nunca uma assinatura", l2: "Tópicos de chat reconhecidos", l3: "Categorias integradas", l4: "Organização completa" },
@@ -222,6 +225,7 @@
     },
 
     ja: {
+      meta: { title: "ChatGPT・Claudeのチャットを自動整理 | 無料Chrome拡張機能", description: "Chat Organizerは、ClaudeとChatGPTのチャットをワンクリックでプロジェクトに自動仕分けします。無料のChrome拡張機能で、APIキーもアカウントも不要です。" },
       nav:  { cta: "Chrome に追加" },
       hero: { badge: "無料 Chrome 拡張機能", h1: "Claude と ChatGPT のチャット、<br><em>ついに整理された</em>", sub: "何百ものチャットが無秩序に？Chat Organizer がすべてをスキャンし、計画を立て、ワンクリックでプロジェクトに移動します。", stars: "Claude ユーザーに愛されています", cta: "Chrome に追加（無料）", note1: "API キー不要", note2: "アカウント不要", note3: "数秒で完了" },
       stats: { v1: "無料", l1: "サブスクリプションなし", l2: "認識できるチャットトピック", l3: "組み込みカテゴリ", l4: "完全整理実行" },
@@ -253,6 +257,7 @@
     },
 
     ru: {
+      meta: { title: "Организация чатов ChatGPT и Claude | Бесплатное расширение", description: "Chat Organizer автоматически сортирует ваши чаты Claude и ChatGPT по проектам в один клик. Бесплатное расширение Chrome, без API-ключа и аккаунта." },
       nav:  { cta: "Добавить в Chrome" },
       hero: { badge: "Бесплатное расширение для Chrome", h1: "Ваши чаты в Claude и ChatGPT,<br><em>наконец организованы</em>", sub: "Сотни чатов в беспорядке? Chat Organizer сканирует их все, составляет план и перемещает всё в проекты одним кликом.", stars: "Любимое расширение пользователей Claude", cta: "Добавить в Chrome — бесплатно", note1: "API-ключ не нужен", note2: "Аккаунт не нужен", note3: "Готово за секунды" },
       stats: { v1: "Бесплатно", l1: "Никаких подписок", l2: "Распознаваемых тем чатов", l3: "Встроенных категорий", l4: "Полная организация" },
@@ -284,6 +289,7 @@
     },
 
     ar: {
+      meta: { title: "تنظيم محادثات ChatGPT و Claude | إضافة Chrome مجانية", description: "ينظّم Chat Organizer محادثات Claude و ChatGPT في مشاريع بنقرة واحدة. إضافة Chrome مجانية، بدون مفتاح API وبدون حساب، ولا يتم حذف أي محادثة." },
       nav:  { cta: "أضف إلى Chrome" },
       hero: { badge: "امتداد Chrome مجاني", h1: "محادثاتك على Claude وChatGPT،<br><em>منظّمة أخيراً</em>", sub: "مئات المحادثات بلا نظام؟ يقوم Chat Organizer بمسحها جميعاً وإنشاء خطة ونقل كل شيء إلى المشاريع بنقرة واحدة.", stars: "يحبّه مستخدمو Claude", cta: "أضف إلى Chrome، مجاناً", note1: "لا حاجة لمفتاح API", note2: "لا حاجة لحساب", note3: "جاهز في ثوانٍ" },
       stats: { v1: "مجاني", l1: "لا اشتراك أبداً", l2: "موضوعات محادثة معترف بها", l3: "فئات مدمجة", l4: "تنظيم شامل" },
@@ -315,6 +321,7 @@
     },
 
     hi: {
+      meta: { title: "ChatGPT और Claude चैट व्यवस्थित करें | मुफ़्त Chrome एक्सटेंशन", description: "Chat Organizer आपकी Claude और ChatGPT चैट को एक क्लिक में प्रोजेक्ट्स में व्यवस्थित करता है। मुफ़्त Chrome एक्सटेंशन, कोई API कुंजी या खाता नहीं चाहिए।" },
       nav:  { cta: "Chrome में जोड़ें" },
       hero: { badge: "मुफ़्त Chrome एक्सटेंशन", h1: "आपकी Claude और ChatGPT चैट्स,<br><em>आख़िरकार व्यवस्थित</em>", sub: "सैकड़ों चैट्स और कोई व्यवस्था नहीं? Chat Organizer सभी को स्कैन करता है, एक योजना बनाता है, और एक क्लिक में सब कुछ प्रोजेक्ट्स में ले जाता है।", stars: "Claude यूज़र्स का पसंदीदा", cta: "Chrome में जोड़ें, मुफ़्त है", note1: "कोई API की ज़रूरत नहीं", note2: "कोई अकाउंट ज़रूरी नहीं", note3: "कुछ सेकंड में तैयार" },
       stats: { v1: "मुफ़्त", l1: "कभी सब्सक्रिप्शन नहीं", l2: "चैट विषय पहचाने गए", l3: "बिल्ट-इन श्रेणियां", l4: "पूर्ण व्यवस्था" },
@@ -346,6 +353,7 @@
     },
 
     id: {
+      meta: { title: "Atur obrolan ChatGPT & Claude | Ekstensi Chrome gratis", description: "Chat Organizer menyortir obrolan Claude dan ChatGPT Anda ke dalam proyek dengan satu klik. Ekstensi Chrome gratis, tanpa kunci API dan tanpa akun." },
       nav:  { cta: "Tambahkan ke Chrome" },
       hero: { badge: "Ekstensi Chrome gratis", h1: "Obrolan Claude dan ChatGPT-mu,<br><em>akhirnya terorganisir</em>", sub: "Ratusan obrolan tanpa keteraturan? Chat Organizer memindai semuanya, membuat rencana, dan memindahkan segalanya ke proyek dengan satu klik.", stars: "Disukai pengguna Claude", cta: "Tambahkan ke Chrome, gratis", note1: "Tanpa kunci API", note2: "Tanpa akun", note3: "Selesai dalam hitungan detik" },
       stats: { v1: "Gratis", l1: "Tidak pernah berlangganan", l2: "Topik obrolan dikenali", l3: "Kategori bawaan", l4: "Pengorganisasian lengkap" },
@@ -377,6 +385,7 @@
     },
 
     it: {
+      meta: { title: "Organizza le chat di ChatGPT e Claude | Estensione gratuita", description: "Chat Organizer ordina automaticamente le tue chat di Claude e ChatGPT in progetti con un clic. Estensione Chrome gratuita, senza chiave API." },
       nav:  { cta: "Aggiungi a Chrome" },
       hero: { badge: "Estensione Chrome gratuita", h1: "Le tue chat di Claude e ChatGPT,<br><em>finalmente organizzate</em>", sub: "Centinaia di chat senza ordine? Chat Organizer le analizza tutte, crea un piano e sposta tutto nei progetti con un clic.", stars: "Amato dagli utenti di Claude", cta: "Aggiungi a Chrome, è gratis", note1: "Nessuna chiave API", note2: "Nessun account necessario", note3: "Pronto in secondi" },
       stats: { v1: "Gratis", l1: "Nessun abbonamento mai", l2: "Argomenti chat riconosciuti", l3: "Categorie integrate", l4: "Organizzazione completa" },
@@ -408,6 +417,7 @@
     },
 
     tr: {
+      meta: { title: "ChatGPT ve Claude sohbetlerini düzenle | Ücretsiz eklenti", description: "Chat Organizer, Claude ve ChatGPT sohbetlerini tek tıkla projelere ayırır. Ücretsiz Chrome eklentisi, API anahtarı ve hesap gerekmez." },
       nav:  { cta: "Chrome'a Ekle" },
       hero: { badge: "Ücretsiz Chrome Uzantısı", h1: "Claude ve ChatGPT sohbetlerin,<br><em>sonunda düzene girdi</em>", sub: "Yüzlerce sohbet ve hiç düzen yok mu? Chat Organizer hepsini tarar, bir plan oluşturur ve her şeyi tek tıkla projelere taşır.", stars: "Claude kullanıcılarının favorisi", cta: "Chrome'a Ekle, ücretsiz", note1: "API anahtarı gerekmez", note2: "Hesap gerekmez", note3: "Saniyeler içinde hazır" },
       stats: { v1: "Ücretsiz", l1: "Hiçbir zaman abonelik yok", l2: "Tanınan sohbet konusu", l3: "Yerleşik kategori", l4: "Tam düzenleme" },
@@ -462,11 +472,17 @@
     // duplicates of the English homepage, which suppressed their own snippets
     // in non-English results. Base it on the actual URL param (not the resolved
     // lang) so the bare apex stays apex-canonical.
-    var urlLang = new URLSearchParams(window.location.search).get('lang');
-    var canon = document.querySelector('link[rel="canonical"]');
-    if (canon) {
-      canon.setAttribute('href', 'https://chat-organizer.com/' +
-        (urlLang && T[urlLang] ? '?lang=' + urlLang : ''));
+    // Legacy ?lang=xx URLs are already indexed. Point their canonical at the
+    // static /xx/ page so Google consolidates the old URL into the new one
+    // instead of treating them as competing duplicates. Static pages ship the
+    // correct canonical in their raw HTML and are left alone.
+    if (!STATIC_LANG) {
+      var urlLang = new URLSearchParams(window.location.search).get('lang');
+      var canon = document.querySelector('link[rel="canonical"]');
+      if (canon) {
+        canon.setAttribute('href', 'https://chat-organizer.com/' +
+          (urlLang && T[urlLang] && urlLang !== 'en' ? urlLang + '/' : ''));
+      }
     }
 
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -498,13 +514,21 @@
     try { localStorage.setItem('co-lang', lang); } catch(e) {}
   }
 
+  // Set by build_i18n.py on the pre-rendered /{lang}/ pages. When present the
+  // markup is already translated in the raw HTML, so the runtime pass must not
+  // run again (it would double-wrap the hero brand spans and stomp the
+  // self-referential canonical).
+  var STATIC_LANG = document.documentElement.getAttribute('data-static-lang');
+
   function getLang() {
+    if (STATIC_LANG && T[STATIC_LANG]) return STATIC_LANG;
     var params = new URLSearchParams(window.location.search);
     var p = params.get('lang');
     if (p && T[p]) return p;
-    try { var s = localStorage.getItem('co-lang'); if (s && T[s]) return s; } catch(e) {}
-    var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
-    return T[nav] ? nav : 'en';
+    // No navigator.language fallback: the apex is the English canonical and
+    // each other language has its own indexable URL, so auto-switching here
+    // would serve non-English content at an English canonical.
+    return 'en';
   }
 
   // Wire up switcher (with keyboard support: Escape closes, focus returns to button)
@@ -533,9 +557,24 @@
       }
     });
     document.querySelectorAll('.lang-option').forEach(function(opt) {
-      opt.addEventListener('click', function() { applyLang(opt.dataset.lang); closeMenu(); });
+      opt.addEventListener('click', function() {
+        try { localStorage.setItem('co-lang', opt.dataset.lang); } catch(e) {}
+        // Options are real <a href="/xx/"> links now, so let the browser
+        // navigate to the pre-rendered page instead of swapping text in place.
+        if (!opt.getAttribute('href')) { applyLang(opt.dataset.lang); }
+        closeMenu();
+      });
     });
   }
 
-  applyLang(getLang());
+  if (STATIC_LANG) {
+    // Already translated at build time; just mark the active switcher entry.
+    document.querySelectorAll('.lang-option').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.lang === STATIC_LANG);
+    });
+    var curEl = document.querySelector('.lang-current');
+    if (curEl) curEl.textContent = STATIC_LANG.toUpperCase();
+  } else {
+    applyLang(getLang());
+  }
 })();

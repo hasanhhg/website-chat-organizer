@@ -194,6 +194,18 @@
       padding: 13px 30px; border-radius: 10px; font-weight: 700; font-size: 1.02rem;
       transition: background 0.15s, transform 0.1s;
     }
+    .related { margin: 56px 0 0; }
+    .related h2 { margin-bottom: 18px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .related-card {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+    }
+    .related-card:hover { border-color: var(--primary-border); box-shadow: var(--shadow-sm); transform: translateY(-2px); text-decoration: none; }
+    .related-card strong { display: block; margin-bottom: 4px; font-size: 1.02rem; }
+    .related-card span { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    @media (max-width: 620px) { .related-grid { grid-template-columns: 1fr; } }
     .cta-btn:hover { background: var(--primary-h); text-decoration: none; transform: translateY(-1px); }
     .cta-note { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 12px; }
 
@@ -280,6 +292,20 @@
     <details><summary>Why can't I find an old ChatGPT chat?</summary><div class="a">Usually because it is buried far down the list, it was archived, or you cannot remember the exact wording to search for. Organizing chats into Projects fixes this: related chats live together so you can browse to them instead of guessing keywords.</div></details>
     <details><summary>How do I keep ChatGPT conversations easy to find?</summary><div class="a">Sort them into Projects by topic. The free Chat Organizer Chrome extension auto-sorts hundreds of chats into Projects in one click, so every conversation has an obvious home and old chats are one click away.</div></details>
   </div>
+
+  <section class="related">
+    <h2>Related guides</h2>
+    <div class="related-grid">
+      <a class="related-card" href="how-to-organize-chatgpt-chats.html">
+        <strong>How to organize ChatGPT chats</strong>
+        <span>Move ChatGPT conversations into real Projects instead of browser-only folders.</span>
+      </a>
+      <a class="related-card" href="how-to-organize-claude-chats.html">
+        <strong>How to organize Claude chats</strong>
+        <span>Sort a full Claude.ai sidebar into projects in one click, with a preview before anything moves.</span>
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer>

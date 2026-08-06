@@ -197,6 +197,18 @@
       padding: 13px 30px; border-radius: 10px; font-weight: 700; font-size: 1.02rem;
       transition: background 0.15s, transform 0.1s;
     }
+    .related { margin: 56px 0 0; }
+    .related h2 { margin-bottom: 18px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .related-card {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+    }
+    .related-card:hover { border-color: var(--primary-border); box-shadow: var(--shadow-sm); transform: translateY(-2px); text-decoration: none; }
+    .related-card strong { display: block; margin-bottom: 4px; font-size: 1.02rem; }
+    .related-card span { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    @media (max-width: 620px) { .related-grid { grid-template-columns: 1fr; } }
     .cta-btn:hover { background: var(--primary-h); text-decoration: none; transform: translateY(-1px); }
     .cta-note { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 12px; }
 
@@ -282,6 +294,20 @@
     <details><summary>Does organizing delete any of my Claude chats?</summary><div class="a">No chats are ever deleted. Chats are only moved into projects. Projects left completely empty after organizing are removed to keep your sidebar tidy, but every conversation stays in your history.</div></details>
     <details><summary>Is it free and does it need an API key?</summary><div class="a">It is completely free with no subscription, and it needs no API key and no account. The AI categorization runs on a shared backend at no cost to you.</div></details>
   </div>
+
+  <section class="related">
+    <h2>Related guides</h2>
+    <div class="related-grid">
+      <a class="related-card" href="how-to-organize-chatgpt-chats.html">
+        <strong>How to organize ChatGPT chats</strong>
+        <span>Move ChatGPT conversations into real Projects instead of browser-only folders.</span>
+      </a>
+      <a class="related-card" href="how-to-find-old-chatgpt-conversations.html">
+        <strong>How to find old ChatGPT conversations</strong>
+        <span>Five ways to dig up a lost chat when ChatGPT's own search comes up empty.</span>
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer>
