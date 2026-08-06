@@ -23,6 +23,25 @@
 - [Privacy Policy](https://chat-organizer.com/privacy.html): Exactly what data is and is not handled.
 - [Changelog](https://chat-organizer.com/changelog.html): Release history.
 
+## Translated homepages
+
+Each language below is a fully pre-rendered page (translated in the HTML itself,
+no JavaScript required) with its own canonical URL.
+
+- [Nederlands](https://chat-organizer.com/nl/)
+- [Français](https://chat-organizer.com/fr/)
+- [Deutsch](https://chat-organizer.com/de/)
+- [Español](https://chat-organizer.com/es/)
+- [Italiano](https://chat-organizer.com/it/)
+- [Português](https://chat-organizer.com/pt/)
+- [Türkçe](https://chat-organizer.com/tr/)
+- [Bahasa Indonesia](https://chat-organizer.com/id/)
+- [Русский](https://chat-organizer.com/ru/)
+- [中文](https://chat-organizer.com/zh/)
+- [日本語](https://chat-organizer.com/ja/)
+- [العربية](https://chat-organizer.com/ar/)
+- [हिन्दी](https://chat-organizer.com/hi/)
+
 ## Install
 
 - [Chrome Web Store listing](https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm): Add Chat Organizer to your browser for free.
