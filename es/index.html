@@ -608,29 +608,6 @@
     /* Scroll progress bar */
     .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--accent); z-index: 300; transition: width 0.08s linear; }
 
-    /* Football mascot: strolls across the top bar dribbling a bouncing ball */
-    .mascot { position: fixed; top: 0; left: 0; width: 100%; height: 56px; overflow: hidden; pointer-events: none; z-index: 250; }
-    .mascot-run { position: absolute; bottom: 3px; left: 0; width: 50px; height: 40px; animation: m-across 18s linear infinite; }
-    @keyframes m-across { from { transform: translateX(-60px); } to { transform: translateX(calc(100vw + 16px)); } }
-    .m-fig { position: absolute; bottom: 0; left: 0; animation: m-bob 0.48s ease-in-out infinite; }
-    @keyframes m-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
-    .m-leg, .m-arm { transform-box: fill-box; transform-origin: 50% 0%; }
-    .m-leg-l, .m-arm-r { animation: m-step 0.48s ease-in-out infinite; }
-    .m-leg-r, .m-arm-l { animation: m-step 0.48s ease-in-out infinite; animation-delay: -0.24s; }
-    @keyframes m-step { 0%, 100% { transform: rotate(24deg); } 50% { transform: rotate(-24deg); } }
-    .m-ball { position: absolute; bottom: 1px; left: 27px; width: 12px; height: 12px; border-radius: 50%; border: 1.3px solid #334155;
-      background: radial-gradient(circle at 48% 33%, #334155 0 1.6px, transparent 2.1px),
-                  radial-gradient(circle at 29% 67%, #334155 0 1.3px, transparent 1.8px),
-                  radial-gradient(circle at 71% 67%, #334155 0 1.3px, transparent 1.8px), #fff;
-      animation: m-bounce 0.96s cubic-bezier(0.3, 0, 0.35, 1) infinite; }
-    @keyframes m-bounce {
-      0%   { transform: translateY(0) scale(1.14, 0.84); }
-      12%  { transform: translateY(0) scale(1, 1); }
-      48%  { transform: translateY(-18px) scale(0.95, 1.06); }
-      86%  { transform: translateY(0) scale(1, 1); }
-      100% { transform: translateY(0) scale(1.14, 0.84); }
-    }
-
     /* ─── RESPONSIVE ──────────────────────────────────────── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; gap: var(--s6); padding-top: var(--s8); padding-bottom: var(--s8); }
@@ -675,19 +652,6 @@
 <meta content="es" property="og:locale"/></head>
 <body>
 <div aria-hidden="true" class="scroll-progress"></div>
-<div aria-hidden="true" class="mascot">
-<div class="mascot-run">
-<svg class="m-fig" fill="#334155" height="32" viewbox="0 0 22 32" width="22">
-<circle cx="11" cy="6" r="4.4"></circle>
-<rect height="11.5" rx="2.6" width="5.2" x="8.4" y="10.2"></rect>
-<rect class="m-arm m-arm-l" height="8" rx="1.05" width="2.1" x="6.7" y="11.2"></rect>
-<rect class="m-arm m-arm-r" height="8" rx="1.05" width="2.1" x="13.2" y="11.2"></rect>
-<rect class="m-leg m-leg-l" height="9.5" rx="1.15" width="2.3" x="8.5" y="20.8"></rect>
-<rect class="m-leg m-leg-r" height="9.5" rx="1.15" width="2.3" x="11.2" y="20.8"></rect>
-</svg>
-<span class="m-ball"></span>
-</div>
-</div>
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav aria-label="Main navigation">
