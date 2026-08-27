@@ -115,7 +115,7 @@
       "name": "無料ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい、完全無料です。サブスクリプションなし、プレミアムプランなし、隠れたコストなし。永久に。"
+        "text": "はい。Chat Organizer は現在無料でインストールして利用できます。API キーや別アカウントは不要です。"
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "How do I organize my Claude chats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key."
+        "text": "Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve."
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "@type": "HowToStep",
       "name": "「整理」をクリック",
-      "text": "拡張機能がすべての未整理チャットをスキャンし、キーワードマッチングと AI を使って移動計画を作成します。数秒かかります。"
+      "text": "拡張機能は最近の最大 200 件を確認し、キーワードと AI を使って移動計画を作成します。数秒で完了します。"
     },
     {
       "@type": "HowToStep",
@@ -530,16 +530,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -655,7 +645,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -744,10 +733,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">無料 Chrome 拡張機能</div>
 <h1 data-i18n-html="hero.h1"><span class="brand-claude">Claude</span> と <span class="brand-chatgpt">ChatGPT</span> のチャット、<br/><em>ついに整理された</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">何百ものチャットが無秩序に？Chat Organizer がすべてをスキャンし、計画を立て、ワンクリックでプロジェクトに移動します。</p>
+<p class="hero-sub" data-i18n="hero.sub">何百ものチャットが無秩序に？Chat Organizer は最近の最大 200 件を確認し、計画を作成して、承認した項目だけをプロジェクトへ移動します。</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">Claude ユーザーに愛されています</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">Claude と ChatGPT のパワーユーザー向け</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -816,7 +805,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">無料</span><span class="stat-label" data-i18n="stats.l1">サブスクリプションなし</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">無料</span><span class="stat-label" data-i18n="stats.l1">別アカウント不要</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">認識できるチャットトピック</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">組み込みカテゴリ</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">完全整理実行</span></div>
@@ -831,7 +820,7 @@
 <p class="section-sub" data-i18n="hiw.sub">何かが移動される前に、完全な計画を確認できます。あなたの承認なしに何も起こりません。</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">「整理」をクリック</h3><p data-i18n="step1.desc">拡張機能がすべての未整理チャットをスキャンし、キーワードマッチングと AI を使って移動計画を作成します。数秒かかります。</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">「整理」をクリック</h3><p data-i18n="step1.desc">拡張機能は最近の最大 200 件を確認し、キーワードと AI を使って移動計画を作成します。数秒で完了します。</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">計画を確認</h3><p data-i18n="step2.desc">何かが移動される前に、どのチャットがどこに行くかを正確に確認できます。新しいプロジェクトは明確にマークされています。未一致のチャットは別途フラグが立てられます。</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">「適用」をクリック</h3><p data-i18n="step3.desc">すべてが一括で移動されます。空のプロジェクトは自動的にクリーンアップされます。完了です。</p></div>
 </div>
@@ -947,7 +936,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">ゼロ分析</h3>
-<p data-i18n="pc3.desc">使用状況の追跡なし、テレメトリなし、クラッシュレポートなし。拡張機能に独自のバックエンドはありません。</p>
+<p data-i18n="pc3.desc">使用状況の追跡、テレメトリ、クラッシュレポートはありません。分類が必要な場合のみ、共有 AI サービスへ曖昧なチャットタイトルを送信します。</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -964,32 +953,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">ユーザーの声</div>
-<h2 class="section-title" data-i18n="test.title">チャットの混乱を解決</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">「ついに Claude のサイドバーが整理されました。約 10 秒で 67 件のチャットを整理。プレビューステップが重要です。」</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">ソフトウェア開発者</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">「フランス語でも完璧に動作します。予想外でした。キーワードマッチングがほぼ毎回正確に分類してくれます。」</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">プロダクトマネージャー</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">「API キー不要には懐疑的でしたが、AI フォールバックは本当に機能します。40 件の研究チャットが即座に正しいプロジェクトに分類されました。」</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">研究者</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -998,13 +961,13 @@
 <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">無料ですか？</summary><div class="faq-a" data-i18n="faq.a1">はい、完全無料です。サブスクリプションなし、プレミアムプランなし、隠れたコストなし。永久に。</div></details>
+<details open=""><summary data-i18n="faq.q1">無料ですか？</summary><div class="faq-a" data-i18n="faq.a1">はい。Chat Organizer は現在無料でインストールして利用できます。API キーや別アカウントは不要です。</div></details>
 <details><summary data-i18n="faq.q2">API キーは必要ですか？</summary><div class="faq-a" data-i18n="faq.a2">不要です。AI 分類は共有バックエンドで動作し、あなたへの費用は一切ありません。拡張機能をインストールして「整理」をクリックするだけです。</div></details>
 <details><summary data-i18n="faq.q3">チャットやプロジェクトが削除されますか？</summary><div class="faq-a" data-i18n="faq.a3">チャットが削除されることはありません。整理後に完全に空になったプロジェクトは、サイドバーをきれいに保つために削除されますが、すべての会話はチャット履歴に残ります。</div></details>
 <details><summary data-i18n="faq.q4">英語以外の言語でも動作しますか？</summary><div class="faq-a" data-i18n="faq.a4">はい。キーワードワードリストはオランダ語、フランス語、ドイツ語、スペイン語、イタリア語、ポーランド語、ロシア語、アラビア語、ヒンディー語などをカバーします。AI フォールバックはあらゆる言語で動作します。</div></details>
 <details><summary data-i18n="faq.q5">Claude.ai にログインする必要がありますか？</summary><div class="faq-a" data-i18n="faq.a5">はい。拡張機能はアクティブな Claude.ai ブラウザセッションを使用してチャットを読み取り、移動します。claude.ai を開いてログインし、拡張機能アイコンをクリックしてください。</div></details>
 <details><summary data-i18n="faq.q6">整理操作を元に戻せますか？</summary><div class="faq-a" data-i18n="faq.a6">自動的には元に戻せませんが、Claude.ai でチャットを手動で移動し直すことができます。そのためにプレビューステップがあります。適用をクリックする前にプランをよく確認してください。</div></details>
-<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key.</div></details>
+<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve.</div></details>
 <details><summary data-i18n="faq.q8">Is there a tool to manage and organize hundreds of Claude conversations?</summary><div class="faq-a" data-i18n="faq.a8">Yes. Chat Organizer is a free Chrome extension made to manage and organize large Claude.ai chat histories. It sorts hundreds of conversations into projects automatically, so you can find an old chat in seconds instead of scrolling forever.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="../how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1077,7 +1040,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

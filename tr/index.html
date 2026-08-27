@@ -115,7 +115,7 @@
       "name": "Ücretsiz mi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet, tamamen ücretsiz. Abonelik yok, premium katman yok, gizli maliyet yok. Hiçbir zaman."
+        "text": "Evet. Chat Organizer bugün ücretsiz olarak kurulup kullanılabilir. API anahtarı veya ayrı hesap gerekmez."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "How do I organize my Claude chats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key."
+        "text": "Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve."
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "@type": "HowToStep",
       "name": "Organize'e tıkla",
-      "text": "Uzantı düzensiz tüm sohbetleri tarar ve anahtar kelime eşleştirme ile yapay zeka kullanarak bir taşıma planı oluşturur. Birkaç saniye sürer."
+      "text": "Uzantı en son 200 sohbeti inceler ve anahtar kelime eşleştirme ile yapay zeka kullanarak bir taşıma planı oluşturur. Birkaç saniye sürer."
     },
     {
       "@type": "HowToStep",
@@ -530,16 +530,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -655,7 +645,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -744,10 +733,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">Ücretsiz Chrome Uzantısı</div>
 <h1 data-i18n-html="hero.h1"><span class="brand-claude">Claude</span> ve <span class="brand-chatgpt">ChatGPT</span> sohbetlerin,<br/><em>sonunda düzene girdi</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">Yüzlerce sohbet ve hiç düzen yok mu? Chat Organizer hepsini tarar, bir plan oluşturur ve her şeyi tek tıkla projelere taşır.</p>
+<p class="hero-sub" data-i18n="hero.sub">Yüzlerce sohbet düzensiz mi? Chat Organizer en son 200 sohbeti inceler, bir plan oluşturur ve yalnızca onayladığınız eşleşmeleri projelere taşır.</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">Claude kullanıcılarının favorisi</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">Claude ve ChatGPT ileri düzey kullanıcıları için geliştirildi</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -816,7 +805,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Ücretsiz</span><span class="stat-label" data-i18n="stats.l1">Hiçbir zaman abonelik yok</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Ücretsiz</span><span class="stat-label" data-i18n="stats.l1">Ayrı hesap gerekmez</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">Tanınan sohbet konusu</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">Yerleşik kategori</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">Tam düzenleme</span></div>
@@ -831,7 +820,7 @@
 <p class="section-sub" data-i18n="hiw.sub">Her şey taşınmadan önce tam planı görürsün. Onayın olmadan hiçbir şey olmaz.</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Organize'e tıkla</h3><p data-i18n="step1.desc">Uzantı düzensiz tüm sohbetleri tarar ve anahtar kelime eşleştirme ile yapay zeka kullanarak bir taşıma planı oluşturur. Birkaç saniye sürer.</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Organize'e tıkla</h3><p data-i18n="step1.desc">Uzantı en son 200 sohbeti inceler ve anahtar kelime eşleştirme ile yapay zeka kullanarak bir taşıma planı oluşturur. Birkaç saniye sürer.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">Planı incele</h3><p data-i18n="step2.desc">Herhangi bir şey taşınmadan önce tam olarak hangi sohbetin nereye gideceğini gör. Yeni projeler açıkça işaretlenir. Eşleşmeyen sohbetler ayrıca belirtilir.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">Uygula'ya tıkla</h3><p data-i18n="step3.desc">Her şey bir seferde taşınır. Boş projeler otomatik olarak temizlenir. Tamamlandı.</p></div>
 </div>
@@ -947,7 +936,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">Sıfır analitik</h3>
-<p data-i18n="pc3.desc">Kullanım takibi yok, telemetri yok, kilitlenme raporu yok. Uzantının kendi arka ucu yoktur.</p>
+<p data-i18n="pc3.desc">Kullanım takibi, telemetri veya kilitlenme raporu yoktur. Paylaşılan yapay zeka hizmeti yalnızca sınıflandırma gerektiğinde belirsiz sohbet başlıklarını alır.</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -964,32 +953,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">Kullanıcılar ne diyor</div>
-<h2 class="section-title" data-i18n="test.title">Sohbet kaosunu temizleme</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">"Sonunda Claude kenar çubuğum tam bir felaket değil. Yaklaşık 10 saniyede 67 sohbet düzenlendi. Önizleme adımı çok önemli."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">Yazılım geliştirici</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">"Fransızcada da mükemmel çalışıyor. Bunu beklemiyordum. Anahtar kelime eşleştirme sohbetlerimi neredeyse her seferinde doğru kategoriye koyuyor."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">Ürün yöneticisi</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">"API anahtarı olmamasına skeptiktim ama yapay zeka yedek sistemi gerçekten işe yarıyor. 40 araştırma sohbeti anında doğru projelere sıralandı."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">Araştırmacı</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -998,13 +961,13 @@
 <h2 class="section-title" data-i18n="faq.title">Sık sorulan sorular</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">Ücretsiz mi?</summary><div class="faq-a" data-i18n="faq.a1">Evet, tamamen ücretsiz. Abonelik yok, premium katman yok, gizli maliyet yok. Hiçbir zaman.</div></details>
+<details open=""><summary data-i18n="faq.q1">Ücretsiz mi?</summary><div class="faq-a" data-i18n="faq.a1">Evet. Chat Organizer bugün ücretsiz olarak kurulup kullanılabilir. API anahtarı veya ayrı hesap gerekmez.</div></details>
 <details><summary data-i18n="faq.q2">API anahtarına ihtiyacım var mı?</summary><div class="faq-a" data-i18n="faq.a2">Hayır. Yapay zeka kategorilendirmesi sana herhangi bir maliyet olmadan paylaşılan bir arka uçta çalışır. Uzantıyı yükle ve Organize'e tıkla.</div></details>
 <details><summary data-i18n="faq.q3">Sohbetlerimi veya projelerimi siler mi?</summary><div class="faq-a" data-i18n="faq.a3">Hiçbir sohbet silinmez. Düzenleme sonrasında tamamen boş olan projeler kenar çubuğunu düzenli tutmak için kaldırılır, ancak her konuşma sohbet geçmişinde sağlam kalır.</div></details>
 <details><summary data-i18n="faq.q4">İngilizce dışında başka dillerde de çalışıyor mu?</summary><div class="faq-a" data-i18n="faq.a4">Evet. Kelime listesi Felemenkçe, Fransızca, Almanca, İspanyolca, İtalyanca, Lehçe, Rusça, Arapça, Hintçe ve daha fazlasını kapsar. Yapay zeka yedek sistemi herhangi bir dilde çalışır.</div></details>
 <details><summary data-i18n="faq.q5">Claude.ai'ye giriş yapmam gerekiyor mu?</summary><div class="faq-a" data-i18n="faq.a5">Evet. Uzantı sohbetleri okumak ve taşımak için aktif Claude.ai tarayıcı oturumunu kullanır. claude.ai'yi aç, giriş yap, ardından uzantı simgesine tıkla.</div></details>
 <details><summary data-i18n="faq.q6">Bir düzenlemeyi geri alabilir miyim?</summary><div class="faq-a" data-i18n="faq.a6">Otomatik olarak geri alınamaz, ancak sohbetleri Claude.ai'de manuel olarak geri taşıyabilirsin. Bu nedenle önizleme adımı var: Uygula'ya tıklamadan önce planı dikkatlice incele.</div></details>
-<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key.</div></details>
+<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve.</div></details>
 <details><summary data-i18n="faq.q8">Is there a tool to manage and organize hundreds of Claude conversations?</summary><div class="faq-a" data-i18n="faq.a8">Yes. Chat Organizer is a free Chrome extension made to manage and organize large Claude.ai chat histories. It sorts hundreds of conversations into projects automatically, so you can find an old chat in seconds instead of scrolling forever.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="../how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1077,7 +1040,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

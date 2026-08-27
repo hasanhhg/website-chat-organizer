@@ -115,7 +115,7 @@
       "name": "这是免费的吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "是的，完全免费。没有订阅、没有高级套餐、没有隐藏费用，永远如此。"
+        "text": "是的。Chat Organizer 目前可免费安装和使用，无需 API 密钥或单独账户。"
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "How do I organize my Claude chats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key."
+        "text": "Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve."
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "@type": "HowToStep",
       "name": "点击整理",
-      "text": "扩展程序扫描所有未整理的对话，通过关键词匹配和 AI 生成移动计划，只需几秒钟。"
+      "text": "扩展程序会扫描最近的 200 个对话，并通过关键词匹配和 AI 生成移动计划，只需几秒钟。"
     },
     {
       "@type": "HowToStep",
@@ -530,16 +530,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -655,7 +645,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -744,10 +733,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">免费 Chrome 扩展</div>
 <h1 data-i18n-html="hero.h1">你的 <span class="brand-claude">Claude</span> 和 <span class="brand-chatgpt">ChatGPT</span> 对话，<br/><em>终于井然有序</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">数百个对话毫无条理？Chat Organizer 扫描全部对话，制定计划，一键将所有内容移入项目。</p>
+<p class="hero-sub" data-i18n="hero.sub">数百个对话毫无条理？Chat Organizer 会扫描最近的 200 个对话，制定计划，并将你批准的匹配项移入项目。</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">深受 Claude 用户喜爱</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">专为 Claude 和 ChatGPT 重度用户打造</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -816,7 +805,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">免费</span><span class="stat-label" data-i18n="stats.l1">永久无需订阅</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">免费</span><span class="stat-label" data-i18n="stats.l1">无需单独账户</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">可识别的对话主题</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">内置分类</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">完整整理一次</span></div>
@@ -831,7 +820,7 @@
 <p class="section-sub" data-i18n="hiw.sub">任何内容移动之前，你都能看到完整计划。没有你的确认，什么都不会发生。</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">点击整理</h3><p data-i18n="step1.desc">扩展程序扫描所有未整理的对话，通过关键词匹配和 AI 生成移动计划，只需几秒钟。</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">点击整理</h3><p data-i18n="step1.desc">扩展程序会扫描最近的 200 个对话，并通过关键词匹配和 AI 生成移动计划，只需几秒钟。</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">查看计划</h3><p data-i18n="step2.desc">在任何对话移动之前，清楚看到每个对话的目标位置。新项目有明确标注，未匹配的对话单独列出。</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">点击应用</h3><p data-i18n="step3.desc">所有内容一次性移动完毕。空项目自动清除。完成。</p></div>
 </div>
@@ -947,7 +936,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">零数据分析</h3>
-<p data-i18n="pc3.desc">无使用追踪、无遥测、无崩溃报告。扩展程序没有自己的后端。</p>
+<p data-i18n="pc3.desc">无使用追踪、无遥测、无崩溃报告。仅在需要分类时，共享 AI 服务才会接收含义不明确的对话标题。</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -964,32 +953,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">用户评价</div>
-<h2 class="section-title" data-i18n="test.title">整理对话混乱</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">“终于，我的 Claude 侧边栏不再是一团乱麻了。大约 10 秒内整理了 67 个对话。预览步骤非常关键。”</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">软件开发者</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">“法语也完全正常工作，没想到。关键词匹配几乎每次都能正确分类我的对话。”</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">产品经理</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">“我对不需要 API 密钥持怀疑态度，但 AI 备选方案真的有效。40 个研究对话立刻被分类到正确的项目中。”</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">研究员</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -998,13 +961,13 @@
 <h2 class="section-title" data-i18n="faq.title">常见问题解答</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">这是免费的吗？</summary><div class="faq-a" data-i18n="faq.a1">是的，完全免费。没有订阅、没有高级套餐、没有隐藏费用，永远如此。</div></details>
+<details open=""><summary data-i18n="faq.q1">这是免费的吗？</summary><div class="faq-a" data-i18n="faq.a1">是的。Chat Organizer 目前可免费安装和使用，无需 API 密钥或单独账户。</div></details>
 <details><summary data-i18n="faq.q2">我需要 API 密钥吗？</summary><div class="faq-a" data-i18n="faq.a2">不需要。AI 分类在共享后端上运行，对你完全免费。只需安装扩展程序并点击整理即可。</div></details>
 <details><summary data-i18n="faq.q3">它会删除我的对话或项目吗？</summary><div class="faq-a" data-i18n="faq.a3">不会删除任何对话。整理后完全为空的项目会被删除以保持侧边栏整洁，但每个对话都完整保留在你的聊天历史中。</div></details>
 <details><summary data-i18n="faq.q4">它支持英语以外的其他语言吗？</summary><div class="faq-a" data-i18n="faq.a4">是的。关键词词汇表涵盖荷兰语、法语、德语、西班牙语、意大利语、波兰语、俄语、阿拉伯语、印地语等更多语言。AI 备选方案支持任何语言。</div></details>
 <details><summary data-i18n="faq.q5">我需要登录 Claude.ai 吗？</summary><div class="faq-a" data-i18n="faq.a5">是的。扩展程序使用你活动的 Claude.ai 浏览器会话来读取和移动对话。打开 claude.ai，登录，然后点击扩展程序图标。</div></details>
 <details><summary data-i18n="faq.q6">我可以撤销整理操作吗？</summary><div class="faq-a" data-i18n="faq.a6">不能自动撤销，但你可以在 Claude.ai 中手动移回对话。这就是为什么预览步骤存在：在点击应用之前仔细检查计划。</div></details>
-<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key.</div></details>
+<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve.</div></details>
 <details><summary data-i18n="faq.q8">Is there a tool to manage and organize hundreds of Claude conversations?</summary><div class="faq-a" data-i18n="faq.a8">Yes. Chat Organizer is a free Chrome extension made to manage and organize large Claude.ai chat histories. It sorts hundreds of conversations into projects automatically, so you can find an old chat in seconds instead of scrolling forever.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="../how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1077,7 +1040,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

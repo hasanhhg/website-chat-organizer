@@ -15,7 +15,7 @@
 <!-- Hreflang -->
 <!-- Open Graph -->
 <meta content="Chat Organizer for Claude &amp; ChatGPT: Auto-Sort Your Chats" property="og:title"/>
-<meta content="Chat Organizer for Claude and ChatGPT. Hundreds of chats, zero order? It scans them all and moves everything into projects in one click. Free Chrome extension." property="og:description"/>
+<meta content="Chat Organizer scans up to your 200 most recent Claude and ChatGPT chats, builds a plan, and moves approved matches into projects. Free Chrome extension." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://chat-organizer.com/" property="og:url"/>
 <meta content="https://chat-organizer.com/social-preview.png" property="og:image"/>
@@ -24,7 +24,7 @@
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Chat Organizer for Claude &amp; ChatGPT: Auto-Sort Your Chats" name="twitter:title"/>
-<meta content="Chat Organizer for Claude and ChatGPT. Hundreds of chats, zero order? It scans them all and moves everything into projects in one click. Free Chrome extension." name="twitter:description"/>
+<meta content="Chat Organizer scans up to your 200 most recent Claude and ChatGPT chats, builds a plan, and moves approved matches into projects. Free Chrome extension." name="twitter:description"/>
 <meta content="https://chat-organizer.com/social-preview.png" name="twitter:image"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <!-- Structured data -->
@@ -97,7 +97,7 @@
       {
         "@type": "Question",
         "name": "Is it free?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free. No subscription, no premium tier, no hidden costs. Ever." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Chat Organizer is free to install and use today, with no API key or separate account required." }
       },
       {
         "@type": "Question",
@@ -127,7 +127,7 @@
       {
         "@type": "Question",
         "name": "How do I organize my Claude chats?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve." }
       },
       {
         "@type": "Question",
@@ -166,7 +166,7 @@
         "@type": "HowToStep",
         "position": 1,
         "name": "Click Organize",
-        "text": "The extension scans all your unorganized Claude.ai chats and builds a move plan using keyword matching and AI. Takes a few seconds."
+        "text": "The extension scans up to your 200 most recent chats and builds a move plan using keyword matching and AI. Takes a few seconds."
       },
       {
         "@type": "HowToStep",
@@ -484,16 +484,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -609,7 +599,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -698,10 +687,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">Free Chrome Extension</div>
 <h1 data-i18n-html="hero.h1">Your Claude &amp; ChatGPT chats,<br/><em>finally organized</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">Hundreds of chats and zero order? Chat Organizer is the AI chat organizer that scans them all, builds a plan, and moves every Claude and ChatGPT chat into projects in one click.</p>
+<p class="hero-sub" data-i18n="hero.sub">Hundreds of chats and zero order? Chat Organizer scans up to your 200 most recent chats, builds a plan, and moves approved matches into projects.</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">Loved by Claude and ChatGPT power users</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">Built for Claude and ChatGPT power users</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -770,7 +759,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Free</span><span class="stat-label" data-i18n="stats.l1">No subscription ever</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Free</span><span class="stat-label" data-i18n="stats.l1">No account required</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">Chat topics recognized</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">Built-in categories</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">Full organize run</span></div>
@@ -785,7 +774,7 @@
 <p class="section-sub" data-i18n="hiw.sub">You see the full plan before anything moves. Nothing happens without your approval.</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Click Organize</h3><p data-i18n="step1.desc">The extension scans all your unorganized chats and builds a move plan using keyword matching and AI. Takes a few seconds.</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Click Organize</h3><p data-i18n="step1.desc">The extension scans up to your 200 most recent chats and builds a move plan using keyword matching and AI. Takes a few seconds.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">Review the plan</h3><p data-i18n="step2.desc">See exactly which chat goes where before anything moves. New projects are clearly marked. Unmatched chats are flagged separately.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">Click Apply</h3><p data-i18n="step3.desc">Everything moves in one batch. Empty projects are cleaned up automatically. Done.</p></div>
 </div>
@@ -901,7 +890,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">Zero analytics</h3>
-<p data-i18n="pc3.desc">No usage tracking, no telemetry, no crash reports. The extension has no backend of its own.</p>
+<p data-i18n="pc3.desc">No usage tracking, telemetry, or crash reports. A shared AI service receives only ambiguous chat titles when categorization is needed.</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -918,32 +907,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">What users say</div>
-<h2 class="section-title" data-i18n="test.title">Cleaning up chat chaos</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">"Finally, my Claude sidebar is not a complete disaster. Organized 67 chats in about 10 seconds. The preview step is key."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">Software developer</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">"Works perfectly in French too. Was not expecting that. The keyword matching gets my chats right almost every time."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">Product manager</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">"I was skeptical about no API key but the AI fallback genuinely works. Sorted 40 research chats into the right projects instantly."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">Researcher</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -952,13 +915,13 @@
 <h2 class="section-title" data-i18n="faq.title">Common questions</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">Is it free?</summary><div class="faq-a" data-i18n="faq.a1">Yes, completely free. No subscription, no premium tier, no hidden costs. Ever.</div></details>
+<details open=""><summary data-i18n="faq.q1">Is it free?</summary><div class="faq-a" data-i18n="faq.a1">Yes. Chat Organizer is free to install and use today, with no API key or separate account required.</div></details>
 <details><summary data-i18n="faq.q2">Do I need an API key?</summary><div class="faq-a" data-i18n="faq.a2">No. The AI categorization runs on a shared backend at no cost to you. Just install the extension and click Organize.</div></details>
 <details><summary data-i18n="faq.q3">Will it delete my chats or projects?</summary><div class="faq-a" data-i18n="faq.a3">No chats are ever deleted. Projects that are left completely empty after organizing are removed to keep your sidebar clean, but every conversation stays intact in your chat history.</div></details>
 <details><summary data-i18n="faq.q4">Does it work in languages other than English?</summary><div class="faq-a" data-i18n="faq.a4">Yes. The keyword wordlist covers Dutch, French, German, Spanish, Italian, Polish, Russian, Arabic, Hindi and more. The AI fallback works in any language.</div></details>
 <details><summary data-i18n="faq.q5">Do I need to be logged in to Claude.ai?</summary><div class="faq-a" data-i18n="faq.a5">Yes. The extension uses your active Claude.ai browser session to read and move chats. Open claude.ai, log in, then click the extension icon.</div></details>
 <details><summary data-i18n="faq.q6">Can I undo an organize run?</summary><div class="faq-a" data-i18n="faq.a6">Not automatically, but you can move chats back manually in Claude.ai. That's why the preview step exists: review the plan carefully before clicking Apply.</div></details>
-<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key.</div></details>
+<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve.</div></details>
 <details><summary data-i18n="faq.q8">Is there a tool to manage and organize hundreds of Claude conversations?</summary><div class="faq-a" data-i18n="faq.a8">Yes. Chat Organizer is a free Chrome extension made to manage and organize large Claude.ai chat histories. It sorts hundreds of conversations into projects automatically, so you can find an old chat in seconds instead of scrolling forever.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1031,7 +994,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

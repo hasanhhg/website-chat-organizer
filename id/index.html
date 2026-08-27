@@ -115,7 +115,7 @@
       "name": "Apakah gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ya, sepenuhnya gratis. Tidak ada langganan, tidak ada tingkat premium, tidak ada biaya tersembunyi. Selamanya."
+        "text": "Ya. Chat Organizer dapat dipasang dan digunakan gratis hari ini. Tidak perlu kunci API atau akun terpisah."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "How do I organize my Claude chats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key."
+        "text": "Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve."
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "@type": "HowToStep",
       "name": "Klik Organize",
-      "text": "Ekstensi memindai semua obrolan yang belum terorganisir dan membuat rencana pemindahan menggunakan pencocokan kata kunci dan AI. Hanya butuh beberapa detik."
+      "text": "Ekstensi memeriksa hingga 200 obrolan terbaru dan membuat rencana dengan pencocokan kata kunci dan AI. Hanya butuh beberapa detik."
     },
     {
       "@type": "HowToStep",
@@ -530,16 +530,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -655,7 +645,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -744,10 +733,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">Ekstensi Chrome gratis</div>
 <h1 data-i18n-html="hero.h1">Obrolan <span class="brand-claude">Claude</span> dan <span class="brand-chatgpt">ChatGPT</span>-mu,<br/><em>akhirnya terorganisir</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">Ratusan obrolan tanpa keteraturan? Chat Organizer memindai semuanya, membuat rencana, dan memindahkan segalanya ke proyek dengan satu klik.</p>
+<p class="hero-sub" data-i18n="hero.sub">Ratusan obrolan tidak teratur? Chat Organizer memeriksa hingga 200 obrolan terbaru, membuat rencana, dan memindahkan hanya kecocokan yang Anda setujui ke proyek.</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">Disukai pengguna Claude</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">Dibuat untuk pengguna mahir Claude dan ChatGPT</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -816,7 +805,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Gratis</span><span class="stat-label" data-i18n="stats.l1">Tidak pernah berlangganan</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Gratis</span><span class="stat-label" data-i18n="stats.l1">Tidak perlu akun terpisah</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">Topik obrolan dikenali</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">Kategori bawaan</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">Pengorganisasian lengkap</span></div>
@@ -831,7 +820,7 @@
 <p class="section-sub" data-i18n="hiw.sub">Kamu melihat rencana lengkap sebelum ada yang dipindahkan. Tidak ada yang terjadi tanpa persetujuanmu.</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Klik Organize</h3><p data-i18n="step1.desc">Ekstensi memindai semua obrolan yang belum terorganisir dan membuat rencana pemindahan menggunakan pencocokan kata kunci dan AI. Hanya butuh beberapa detik.</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Klik Organize</h3><p data-i18n="step1.desc">Ekstensi memeriksa hingga 200 obrolan terbaru dan membuat rencana dengan pencocokan kata kunci dan AI. Hanya butuh beberapa detik.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">Tinjau rencananya</h3><p data-i18n="step2.desc">Lihat dengan tepat obrolan mana yang akan ke mana sebelum ada yang dipindahkan. Proyek baru ditandai dengan jelas. Obrolan yang tidak cocok ditandai secara terpisah.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">Klik Apply</h3><p data-i18n="step3.desc">Semuanya dipindahkan sekaligus. Proyek kosong dibersihkan secara otomatis. Selesai.</p></div>
 </div>
@@ -947,7 +936,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">Nol analitik</h3>
-<p data-i18n="pc3.desc">Tidak ada pelacakan penggunaan, tidak ada telemetri, tidak ada laporan crash. Ekstensi tidak memiliki backend sendiri.</p>
+<p data-i18n="pc3.desc">Tidak ada pelacakan penggunaan, telemetri, atau laporan kerusakan. Layanan AI bersama hanya menerima judul obrolan ambigu saat kategorisasi diperlukan.</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -964,32 +953,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">Apa kata pengguna</div>
-<h2 class="section-title" data-i18n="test.title">Membereskan kekacauan obrolan</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">"Akhirnya, sidebar Claude-ku tidak lagi berantakan. Mengorganisir 67 obrolan dalam sekitar 10 detik. Langkah pratinjau adalah kuncinya."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">Pengembang perangkat lunak</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">"Bekerja sempurna dalam bahasa Prancis juga. Tidak menyangka. Pencocokan kata kunci hampir selalu tepat mengkategorikan obrolanku."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">Manajer produk</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">"Awalnya skeptis soal tidak ada kunci API, tapi fallback AI benar-benar berfungsi. 40 obrolan penelitian langsung masuk ke proyek yang tepat."</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">Peneliti</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -998,13 +961,13 @@
 <h2 class="section-title" data-i18n="faq.title">Pertanyaan umum</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">Apakah gratis?</summary><div class="faq-a" data-i18n="faq.a1">Ya, sepenuhnya gratis. Tidak ada langganan, tidak ada tingkat premium, tidak ada biaya tersembunyi. Selamanya.</div></details>
+<details open=""><summary data-i18n="faq.q1">Apakah gratis?</summary><div class="faq-a" data-i18n="faq.a1">Ya. Chat Organizer dapat dipasang dan digunakan gratis hari ini. Tidak perlu kunci API atau akun terpisah.</div></details>
 <details><summary data-i18n="faq.q2">Apakah saya perlu kunci API?</summary><div class="faq-a" data-i18n="faq.a2">Tidak. Kategorisasi AI berjalan di backend bersama tanpa biaya untukmu. Cukup pasang ekstensi dan klik Organize.</div></details>
 <details><summary data-i18n="faq.q3">Apakah akan menghapus obrolan atau proyekku?</summary><div class="faq-a" data-i18n="faq.a3">Tidak ada obrolan yang dihapus. Proyek yang benar-benar kosong setelah pengorganisasian dihapus untuk menjaga sidebar tetap bersih, tetapi setiap percakapan tetap utuh di riwayat obrolanmu.</div></details>
 <details><summary data-i18n="faq.q4">Apakah berfungsi dalam bahasa selain Inggris?</summary><div class="faq-a" data-i18n="faq.a4">Ya. Daftar kata mencakup bahasa Belanda, Prancis, Jerman, Spanyol, Italia, Polandia, Rusia, Arab, Hindi, dan lainnya. Fallback AI berfungsi dalam bahasa apa pun.</div></details>
 <details><summary data-i18n="faq.q5">Apakah saya perlu masuk ke Claude.ai?</summary><div class="faq-a" data-i18n="faq.a5">Ya. Ekstensi menggunakan sesi browser Claude.ai aktifmu untuk membaca dan memindahkan obrolan. Buka claude.ai, masuk, lalu klik ikon ekstensi.</div></details>
 <details><summary data-i18n="faq.q6">Bisakah saya membatalkan pengorganisasian?</summary><div class="faq-a" data-i18n="faq.a6">Tidak secara otomatis, tapi kamu bisa memindahkan obrolan kembali secara manual di Claude.ai. Itulah mengapa langkah pratinjau ada: tinjau rencana dengan cermat sebelum mengklik Apply.</div></details>
-<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install the Chat Organizer extension, open Claude.ai, and click Organize. It scans every unorganized chat, picks a project for each one using keyword matching and AI, and moves them all in one click once you approve the plan. No manual sorting, no API key.</div></details>
+<details><summary data-i18n="faq.q7">How do I organize my Claude chats?</summary><div class="faq-a" data-i18n="faq.a7">Install Chat Organizer, open Claude.ai, and click Organize. It scans up to your 200 most recent chats, suggests projects for unorganized matches, and moves only the plan you approve.</div></details>
 <details><summary data-i18n="faq.q8">Is there a tool to manage and organize hundreds of Claude conversations?</summary><div class="faq-a" data-i18n="faq.a8">Yes. Chat Organizer is a free Chrome extension made to manage and organize large Claude.ai chat histories. It sorts hundreds of conversations into projects automatically, so you can find an old chat in seconds instead of scrolling forever.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="../how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1077,7 +1040,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

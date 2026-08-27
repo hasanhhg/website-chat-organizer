@@ -8,10 +8,10 @@ into projects in one click.
 
 ## What it does
 
-Hundreds of unsorted chats and no way to find anything? Chat Organizer scans every
-unorganized conversation on Claude.ai or ChatGPT, works out what each one is about
+Hundreds of unsorted chats and no way to find anything? Chat Organizer scans up to
+your 200 most recent chats on Claude.ai or ChatGPT, works out what each unorganized chat is about
 using a multilingual keyword wordlist plus AI for ambiguous titles, and shows you a
-full preview before anything moves. One click applies the plan, sorting every chat
+full preview before anything moves. One click applies the plan, sorting approved matches
 into the right project and cleaning up empty projects automatically.
 
 - No API key, no account, no setup

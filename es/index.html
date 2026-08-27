@@ -115,7 +115,7 @@
       "name": "¿Es gratuito?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, completamente gratuito. Sin suscripción, sin nivel premium, sin costes ocultos. Nunca."
+        "text": "Sí. Chat Organizer se puede instalar y usar gratis hoy. No requiere una clave API ni una cuenta aparte."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "¿Cómo organizo mis chats de Claude?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Instala la extensión Chat Organizer, abre Claude.ai y haz clic en Organizar. Escanea cada chat sin organizar, elige un proyecto para cada uno con coincidencia de palabras clave e IA, y los mueve todos con un clic cuando apruebas el plan. Sin orden manual, sin clave API."
+        "text": "Instala Chat Organizer, abre Claude.ai y haz clic en Organizar. Analiza hasta tus 200 chats más recientes, sugiere proyectos y mueve solo el plan que apruebes."
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "@type": "HowToStep",
       "name": "Haz clic en Organizar",
-      "text": "La extensión escanea todos tus chats sin organizar y crea un plan usando coincidencia de palabras clave e IA. Tarda unos segundos."
+      "text": "La extensión analiza hasta tus 200 chats más recientes y crea un plan con palabras clave e IA. Tarda unos segundos."
     },
     {
       "@type": "HowToStep",
@@ -530,16 +530,6 @@
     .permission-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); font-family: monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: var(--s1); }
     .permission-desc { font-size: var(--t-xs); color: var(--muted); line-height: 1.55; }
 
-    /* ─── TESTIMONIALS ────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
-    .testimonial { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s4); }
-    .testimonial-stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: var(--s2); }
-    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.65; margin-bottom: var(--s3); }
-    .testimonial-author { display: flex; align-items: center; gap: var(--s2); }
-    .testimonial-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .testimonial-name { font-size: var(--t-xs); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .testimonial-role { font-size: var(--t-xs); color: var(--faint); }
-
     /* ─── FAQ ─────────────────────────────────────────────── */
     .faq { display: flex; flex-direction: column; gap: var(--s2); }
     .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color 0.15s; }
@@ -655,7 +645,6 @@
       .topics-stat-label { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
       .topics-meta { grid-column: 2; }
       .cta-band-inner { flex-direction: column; text-align: center; }
-      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .steps { grid-template-columns: 1fr; }
@@ -744,10 +733,10 @@
 <div class="hero-content">
 <div class="hero-badge" data-i18n="hero.badge">Extensión de Chrome gratuita</div>
 <h1 data-i18n-html="hero.h1">Tus chats de <span class="brand-claude">Claude</span> y <span class="brand-chatgpt">ChatGPT</span>,<br/><em>por fin organizados</em></h1>
-<p class="hero-sub" data-i18n="hero.sub">¿Cientos de chats sin orden? Chat Organizer los analiza, crea un plan y mueve todo a proyectos con un clic.</p>
+<p class="hero-sub" data-i18n="hero.sub">¿Cientos de chats sin orden? Chat Organizer analiza hasta tus 200 chats más recientes, crea un plan y mueve a proyectos las coincidencias que apruebes.</p>
 <div class="hero-stars">
-<span aria-label="5 out of 5 stars" class="stars">★★★★★</span>
-<span data-i18n="hero.stars">Amado por los usuarios de Claude</span>
+<span aria-hidden="true" class="stars">✓</span>
+<span data-i18n="hero.stars">Creado para usuarios avanzados de Claude y ChatGPT</span>
 </div>
 <a class="btn-primary" href="https://chromewebstore.google.com/detail/bipbaacophbcpboieghjoigjlbemchcm">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 16"><path d="M8 2C4.686 2 2 4.686 2 8s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"></path><circle cx="8" cy="8" fill="currentColor" r="2.5" stroke="none"></circle></svg>
@@ -816,7 +805,7 @@
 <!-- ── STATS ──────────────────────────────────────────────── -->
 <div aria-label="Key statistics" class="stats-strip">
 <div class="stats-inner">
-<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Gratis</span><span class="stat-label" data-i18n="stats.l1">Nunca una suscripción</span></div>
+<div class="stat-item"><span class="stat-value" data-i18n="stats.v1">Gratis</span><span class="stat-label" data-i18n="stats.l1">No requiere cuenta</span></div>
 <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label" data-i18n="stats.l2">Temas de chat reconocidos</span></div>
 <div class="stat-item"><span class="stat-value">24+</span><span class="stat-label" data-i18n="stats.l3">Categorías integradas</span></div>
 <div class="stat-item"><span class="stat-value">1-click</span><span class="stat-label" data-i18n="stats.l4">Organización completa</span></div>
@@ -831,7 +820,7 @@
 <p class="section-sub" data-i18n="hiw.sub">Ves el plan completo antes de que se mueva nada. Nada ocurre sin tu aprobación.</p>
 </div>
 <div class="steps">
-<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Haz clic en Organizar</h3><p data-i18n="step1.desc">La extensión escanea todos tus chats sin organizar y crea un plan usando coincidencia de palabras clave e IA. Tarda unos segundos.</p></div>
+<div class="step"><div aria-hidden="true" class="step-num">1</div><h3 data-i18n="step1.title">Haz clic en Organizar</h3><p data-i18n="step1.desc">La extensión analiza hasta tus 200 chats más recientes y crea un plan con palabras clave e IA. Tarda unos segundos.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">2</div><h3 data-i18n="step2.title">Revisa el plan</h3><p data-i18n="step2.desc">Ve exactamente qué chat va dónde antes de que se mueva nada. Los nuevos proyectos están claramente marcados. Los chats no reconocidos se señalan aparte.</p></div>
 <div class="step"><div aria-hidden="true" class="step-num">3</div><h3 data-i18n="step3.title">Haz clic en Aplicar</h3><p data-i18n="step3.desc">Todo se mueve de una vez. Los proyectos vacíos se eliminan automáticamente. Listo.</p></div>
 </div>
@@ -947,7 +936,7 @@
 <div class="privacy-card">
 <div class="privacy-card-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line><line stroke-width="1.75" x1="3" x2="21" y1="3" y2="21"></line></svg></div>
 <h3 data-i18n="pc3.title">Cero analíticas</h3>
-<p data-i18n="pc3.desc">Sin seguimiento de uso, sin telemetría, sin informes de errores. La extensión no tiene backend propio.</p>
+<p data-i18n="pc3.desc">Sin seguimiento de uso, telemetría ni informes de errores. El servicio de IA compartido solo recibe títulos ambiguos cuando hace falta categorizarlos.</p>
 </div>
 </div>
 <div class="privacy-note">
@@ -964,32 +953,6 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
-<section class="section white">
-<div class="inner">
-<div class="section-head">
-<div class="eyebrow" data-i18n="test.eyebrow">Lo que dicen los usuarios</div>
-<h2 class="section-title" data-i18n="test.title">Acabando con el caos de chats</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q1">«Por fin, mi barra lateral de Claude no es un desastre completo. 67 chats organizados en unos 10 segundos. El paso de vista previa es clave.»</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">🧑‍💻</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role" data-i18n="test.r1">Desarrollador de software</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q2">«Funciona perfectamente en francés también. No me lo esperaba. La coincidencia de palabras clave clasifica mis chats bien casi siempre.»</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👨‍💼</div><div><div class="testimonial-name">Julien D.</div><div class="testimonial-role" data-i18n="test.r2">Gestor de producto</div></div></div>
-</div>
-<div class="testimonial">
-<div aria-label="5 stars" class="testimonial-stars">★★★★★</div>
-<p class="testimonial-quote" data-i18n="test.q3">«Era escéptico sobre lo de sin clave API, pero el fallback de IA funciona de verdad. 40 chats de investigación ordenados en los proyectos correctos instantáneamente.»</p>
-<div class="testimonial-author"><div aria-hidden="true" class="testimonial-avatar">👩‍🔬</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role" data-i18n="test.r3">Investigadora</div></div></div>
-</div>
-</div>
-</div>
-</section>
 <!-- ── FAQ ───────────────────────────────────────────────── -->
 <section class="section">
 <div class="inner">
@@ -998,13 +961,13 @@
 <h2 class="section-title" data-i18n="faq.title">Preguntas comunes</h2>
 </div>
 <div class="faq">
-<details open=""><summary data-i18n="faq.q1">¿Es gratuito?</summary><div class="faq-a" data-i18n="faq.a1">Sí, completamente gratuito. Sin suscripción, sin nivel premium, sin costes ocultos. Nunca.</div></details>
+<details open=""><summary data-i18n="faq.q1">¿Es gratuito?</summary><div class="faq-a" data-i18n="faq.a1">Sí. Chat Organizer se puede instalar y usar gratis hoy. No requiere una clave API ni una cuenta aparte.</div></details>
 <details><summary data-i18n="faq.q2">¿Necesito una clave API?</summary><div class="faq-a" data-i18n="faq.a2">No. La categorización con IA funciona en un backend compartido sin coste para ti. Instala la extensión y haz clic en Organizar.</div></details>
 <details><summary data-i18n="faq.q3">¿Borrará mis chats o proyectos?</summary><div class="faq-a" data-i18n="faq.a3">No se elimina ningún chat. Los proyectos completamente vacíos tras la organización se eliminan para mantener tu barra lateral limpia, pero cada conversación permanece en tu historial.</div></details>
 <details><summary data-i18n="faq.q4">¿Funciona en otros idiomas además del inglés?</summary><div class="faq-a" data-i18n="faq.a4">Sí. La lista de palabras cubre neerlandés, francés, alemán, español, italiano, polaco, ruso, árabe, hindi y más.</div></details>
 <details><summary data-i18n="faq.q5">¿Necesito estar conectado a Claude.ai?</summary><div class="faq-a" data-i18n="faq.a5">Sí. La extensión usa tu sesión activa del navegador en Claude.ai para leer y mover chats. Abre claude.ai, inicia sesión y haz clic en el icono de la extensión.</div></details>
 <details><summary data-i18n="faq.q6">¿Puedo deshacer una organización?</summary><div class="faq-a" data-i18n="faq.a6">No automáticamente, pero puedes mover los chats de vuelta manualmente en Claude.ai. Por eso existe el paso de vista previa: revisa el plan con cuidado antes de hacer clic en Aplicar.</div></details>
-<details><summary data-i18n="faq.q7">¿Cómo organizo mis chats de Claude?</summary><div class="faq-a" data-i18n="faq.a7">Instala la extensión Chat Organizer, abre Claude.ai y haz clic en Organizar. Escanea cada chat sin organizar, elige un proyecto para cada uno con coincidencia de palabras clave e IA, y los mueve todos con un clic cuando apruebas el plan. Sin orden manual, sin clave API.</div></details>
+<details><summary data-i18n="faq.q7">¿Cómo organizo mis chats de Claude?</summary><div class="faq-a" data-i18n="faq.a7">Instala Chat Organizer, abre Claude.ai y haz clic en Organizar. Analiza hasta tus 200 chats más recientes, sugiere proyectos y mueve solo el plan que apruebes.</div></details>
 <details><summary data-i18n="faq.q8">¿Hay una herramienta para gestionar y organizar cientos de conversaciones de Claude?</summary><div class="faq-a" data-i18n="faq.a8">Sí. Chat Organizer es una extensión de Chrome gratuita creada para gestionar y organizar historiales grandes de chats de Claude.ai. Ordena cientos de conversaciones en proyectos automáticamente, para que encuentres un chat antiguo en segundos en lugar de desplazarte sin fin.</div></details>
 <details><summary data-i18n="faq.q9">Does it work with ChatGPT?</summary><div class="faq-a" data-i18n="faq.a9">Yes. Chat Organizer works on both Claude and ChatGPT. Pick the platform in the popup (it auto-detects the tab you are on) and organize either sidebar the same way, with the same one-click preview. See the <a href="../how-to-organize-chatgpt-chats.html">ChatGPT guide</a> for details.</div></details>
 <details><summary>What is the best AI chat organizer?</summary><div class="faq-a">The best AI chat organizer is the one that sorts your existing backlog for you rather than making you file chats by hand. Chat Organizer is a free AI chat organizer for Claude and ChatGPT: it reads your unorganized conversations, works out what each one is about using keyword matching plus AI, and moves them all into projects in one click. You approve a full preview first, and nothing is ever deleted.</div></details>
@@ -1077,7 +1040,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.step, .feature, .privacy-card, .testimonial, .permission-item');
+  var els = document.querySelectorAll('.step, .feature, .privacy-card, .permission-item');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
