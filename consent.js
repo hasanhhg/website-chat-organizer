@@ -137,10 +137,12 @@
       '.co-consent-decline:hover{border-color:#94A3B8}' +
       '.co-consent-accept{background:#334155;color:#fff}' +
       '.co-consent-accept:hover{background:#1E293B}' +
+      'body:has(#co-consent){padding-bottom:104px}' +
       '@media(max-width:600px){' +
       '#co-consent{flex-direction:column;align-items:stretch;gap:10px;padding:14px 14px 12px;bottom:0;left:0;right:0;border-radius:14px 14px 0 0}' +
       '.co-consent-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}' +
       '.co-consent-btn{padding:11px 10px;text-align:center}' +
+      'body:has(#co-consent){padding-bottom:136px}' +
       '}';
     var el = document.createElement('style');
     el.textContent = css;
