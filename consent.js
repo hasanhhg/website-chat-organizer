@@ -1,10 +1,8 @@
 /*
  * Cookie consent + analytics loader for chat-organizer.com
  *
- * Implements Google Consent Mode v2: analytics/ad storage default to "denied"
- * and are only granted after the visitor accepts in the banner. Google
- * Analytics (gtag.js) is loaded here so nothing tracks before consent state
- * is set.
+ * Implements basic Google Consent Mode v2. Google Analytics and Microsoft
+ * Clarity are not loaded until the visitor accepts analytics cookies.
  *
  * To enable Microsoft Clarity (session replay / heatmaps):
  *   1. Set CLARITY_ID below to your Clarity project id.
@@ -46,12 +44,12 @@
 
   function grantConsent() {
     gtag('consent', 'update', {
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
       analytics_storage: 'granted',
       functionality_storage: 'granted',
-      personalization_storage: 'granted'
+      personalization_storage: 'denied'
     });
   }
   function denyConsent() {
@@ -65,6 +63,24 @@
     });
   }
 
+  var analyticsLoaded = false;
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+    grantConsent();
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  function trackEvent(name, params) {
+    if (getStored() === 'granted') gtag('event', name, params);
+  }
+
   var clarityLoaded = false;
   function loadClarity() {
     if (clarityLoaded || !CLARITY_ID) return;
@@ -74,21 +90,18 @@
       t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', CLARITY_ID);
+    window.clarity('consentv2', {
+      ad_Storage: 'denied',
+      analytics_Storage: 'granted'
+    });
   }
 
-  // ── Fire analytics config + load the gtag.js library ──────────────────────
+  // ── Load analytics only after consent ─────────────────────────────────────
   var choice = getStored();
-  if (choice === 'granted') grantConsent();
-
-  gtag('js', new Date());
-  gtag('config', GA_ID);
-
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-  document.head.appendChild(s);
-
-  if (choice === 'granted') loadClarity();
+  if (choice === 'granted') {
+    loadAnalytics();
+    loadClarity();
+  }
 
   // ── Banner ────────────────────────────────────────────────────────────────
   var B = {
@@ -200,8 +213,23 @@
     accept.textContent = t.accept;
 
     function close() { if (bar.parentNode) bar.parentNode.removeChild(bar); }
-    decline.addEventListener('click', function () { setStored('denied'); denyConsent(); close(); });
-    accept.addEventListener('click', function () { setStored('granted'); grantConsent(); loadClarity(); close(); });
+    decline.addEventListener('click', function () {
+      var reload = analyticsLoaded || clarityLoaded;
+      setStored('denied');
+      denyConsent();
+      if (window.clarity) {
+        window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+        window.clarity('consent', false);
+      }
+      close();
+      if (reload) location.reload();
+    });
+    accept.addEventListener('click', function () {
+      setStored('granted');
+      loadAnalytics();
+      loadClarity();
+      close();
+    });
 
     btns.appendChild(decline);
     btns.appendChild(accept);
@@ -234,7 +262,7 @@
         if (lang && B[lang]) {
           applyLangToBanner(lang);
           // Track which languages visitors actually switch to (justifies translations)
-          gtag('event', 'language_select', { selected_language: lang });
+          trackEvent('language_select', { selected_language: lang });
           if (window.clarity) window.clarity('set', 'language', lang);
         }
       });
@@ -255,7 +283,7 @@
         if (a.classList.contains(cls)) { location = locationMap[cls]; break; }
       }
       a.addEventListener('click', function () {
-        gtag('event', 'add_to_chrome', { button_location: location });
+        trackEvent('add_to_chrome', { button_location: location });
         // Tag the Clarity session so you can filter recordings of people who
         // actually clicked install (converters) vs everyone else.
         if (window.clarity) {
