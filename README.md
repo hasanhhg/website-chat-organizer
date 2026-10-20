@@ -80,6 +80,11 @@ Example: `https://chat-organizer.com/?utm_source=reddit&utm_medium=social&utm_ca
 - Never put UTM on links inside the site: keep campaign tags for incoming links so
   attribution stays clear.
 
+Store links from this website use `utm_source=chat-organizer.com`, `utm_medium=referral`,
+`utm_campaign=2026-10-website` and a page/button `utm_content`. This gives the Store
+a complete campaign label. The old `ext_sidebar / (not set)` traffic came from a
+link absent from the current sources, so its old labels cannot be repaired retroactively.
+
 ## Verification
 
 Run `node --check consent.js` and `python check-analytics.py` (Python Playwright with

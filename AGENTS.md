@@ -4,8 +4,8 @@
 
 Updated: 2026-10-20, Codex
 
-- Done: Shared consent and article CTA repairs pass the browser checks on all 19 pages.
-- Busy: The verified website change is ready to publish.
+- Done: Consent, article goals and campaign labels pass browser checks on all 19 pages.
+- Busy: Complete Store campaign tags are ready to publish.
 - Next: Push main and verify the GitHub Pages deployment and live article behavior.
 - Watch: Store installs are measured in a separate property; the extension is a separate repo.
 

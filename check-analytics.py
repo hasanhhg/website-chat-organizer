@@ -2,7 +2,7 @@
 
 import mimetypes
 from pathlib import Path
-from urllib.parse import urlparse, unquote
+from urllib.parse import parse_qs, urlparse, unquote
 from xml.etree import ElementTree
 
 from playwright.sync_api import sync_playwright
@@ -45,6 +45,11 @@ def main():
             assert page.locator("#co-consent").is_visible(), url
             assert page.locator("#co-consent .co-consent-link").get_attribute("href") == "/privacy.html", url
             assert commands(page, "config") == [], url
+            for link in page.locator('a[href*="chromewebstore.google.com"]').all():
+                query = parse_qs(urlparse(link.get_attribute("href")).query)
+                assert query.get("utm_source") == ["chat-organizer.com"], url
+                assert query.get("utm_medium") == ["referral"], url
+                assert query.get("utm_campaign") == ["2026-10-website"], url
             page.close()
         assert tag_requests == []
 
