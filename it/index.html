@@ -568,6 +568,8 @@
     html[dir="rtl"] .lang-menu { right: auto; left: 0; }
     html[dir="rtl"] .nav-right { flex-direction: row-reverse; }
     html[dir="rtl"] .footer-links { justify-content: flex-start; }
+    html[dir="rtl"] .footer-links a:hover { transform: translateX(-2px); }
+    html[dir="rtl"] .footer-copy { text-align: right; }
     html[dir="rtl"] .hero-note span::before { margin-right: 0; margin-left: 5px; }
     html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
     html[dir="rtl"] .privacy-note { flex-direction: row-reverse; }
@@ -998,7 +1000,7 @@
 <div class="footer-copy" data-i18n="footer.copy">Non affiliato con Anthropic né OpenAI. Claude è un marchio di Anthropic, PBC; ChatGPT è un marchio di OpenAI.</div>
 </footer>
 <!-- Analytics + cookie consent (Google Consent Mode v2) -->
-<script src="../consent.js"></script>
+<script src="/consent.js?v=20261020"></script>
 <!-- Translations -->
 <script src="../translations.js"></script>
 <!-- Scroll-reveal: progressive enhancement, skipped for reduced motion / no IO support -->

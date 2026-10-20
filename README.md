@@ -33,20 +33,23 @@ into the right project and cleaning up empty projects automatically.
 
 GA4 measurement ID `G-EZG37BF12B`. `consent.js` loads Google Analytics and Microsoft
 Clarity only after a visitor clicks Accept (Consent Mode v2, choice in localStorage
-`co-consent`). The three guide pages do not include `consent.js` yet, so they measure nothing.
+`co-consent`). All 19 sitemap pages include the shared script, including the three guides.
+Local previews never load either measurement service. Visitors can reopen Cookie settings
+and withdraw consent; withdrawal clears analytics cookies and reloads the page.
 
 ### Events the site sends
 
 | Event | Key event | Parameters | When |
 |---|---|---|---|
-| `add_to_chrome` | yes | `button_location`: `nav`, `hero`, `mid_band`, `bottom_cta` or `footer` | a click on any Chrome Web Store link |
+| `add_to_chrome` | yes | `button_location`: `nav`, `hero`, `mid_band`, `bottom_cta`, `article` or `footer` | a click on any Chrome Web Store link |
 | `language_select` | no | `selected_language` | a choice in the language menu |
 
 GA4 adds `page_view`, `session_start`, `first_visit`, `user_engagement`, `scroll`,
 `click` (outbound links) and the rest of enhanced measurement on its own. `purchase`
 exists as a key event in every GA4 property and cannot be deleted; nothing is sold here,
-so it never counts. Installs, uninstalls and active users live only in the Chrome Web
-Store dashboard: GA4 never sees the install itself.
+so it never counts. The separate Chrome Web Store GA4 property `536839144` receives
+Store events. Its `install` event is a key event from 2026-10-20. A website CTA click
+and a Store install are separate measures; these reports do not match individual people.
 
 Rules for a new event:
 
@@ -74,8 +77,20 @@ Example: `https://chat-organizer.com/?utm_source=reddit&utm_medium=social&utm_ca
 
 - Only these `utm_medium` values: GA4 sorts channels on that word, and a home-made one
   lands in "Unassigned" and spoils the channel report.
-- Never put UTM on links inside the site: they start a new session and overwrite where
-  the visitor really came from.
+- Never put UTM on links inside the site: keep campaign tags for incoming links so
+  attribution stays clear.
+
+## Verification
+
+Run `node --check consent.js` and `python check-analytics.py` (Python Playwright with
+Chromium installed). The browser check covers consent on all sitemap pages, translated
+privacy links, guide CTA events, withdrawal and previews without sending analytics.
+
+## Decisions
+
+- 2026-10-20: Reuse the shared consent script on the guides and label their CTA clicks
+  `article`; separate page-specific trackers would drift. Keep preview hosts out of
+  production measurement and permit withdrawal from every page.
 
 ## About this repo
 

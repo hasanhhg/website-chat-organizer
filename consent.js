@@ -7,7 +7,7 @@
  * To enable Microsoft Clarity (session replay / heatmaps):
  *   1. Set CLARITY_ID below to your Clarity project id.
  *   2. Add these origins to the Content-Security-Policy meta tag on every page:
- *        script-src  : https://*.clarity.ms   (NOT just www.clarity.ms — the
+ *        script-src  : https://*.clarity.ms   (not just www.clarity.ms: the
  *                      loader pulls the real recorder from scripts.clarity.ms,
  *                      so a www-only script-src silently blocks all recording)
  *        img-src     : https://*.clarity.ms
@@ -18,6 +18,8 @@
   var GA_ID      = 'G-EZG37BF12B';
   var CLARITY_ID = 'x2f2g5ok4y';      // Microsoft Clarity project ID
   var STORE_KEY  = 'co-consent';       // 'granted' | 'denied'
+  var isProduction = location.hostname === 'chat-organizer.com';
+  window['ga-disable-' + GA_ID] = !isProduction;
 
   // ── Consent Mode v2 bootstrap (must run before gtag.js executes) ──────────
   window.dataLayer = window.dataLayer || [];
@@ -36,7 +38,10 @@
   });
 
   function getStored() {
-    try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; }
+    try {
+      var saved = localStorage.getItem(STORE_KEY);
+      return saved === 'granted' || saved === 'denied' ? saved : null;
+    } catch (e) { return null; }
   }
   function setStored(v) {
     try { localStorage.setItem(STORE_KEY, v); } catch (e) {}
@@ -63,10 +68,21 @@
     });
   }
 
+  function clearAnalyticsCookies() {
+    document.cookie.split(';').forEach(function (part) {
+      var name = part.split('=')[0].trim();
+      if (!/^(_ga($|_)|_gid$|_gat($|_)|_clck$|_clsk$)/.test(name)) return;
+      ['', ';domain=' + location.hostname, ';domain=.' + location.hostname].forEach(function (domain) {
+        document.cookie = name + '=;max-age=0;path=/' + domain + ';SameSite=Lax;Secure';
+      });
+    });
+  }
+
   var analyticsLoaded = false;
   function loadAnalytics() {
-    if (analyticsLoaded) return;
+    if (analyticsLoaded || !isProduction) return;
     analyticsLoaded = true;
+    window['ga-disable-' + GA_ID] = false;
     grantConsent();
     gtag('js', new Date());
     gtag('config', GA_ID);
@@ -78,12 +94,12 @@
   }
 
   function trackEvent(name, params) {
-    if (getStored() === 'granted') gtag('event', name, params);
+    if (choice === 'granted' && analyticsLoaded) gtag('event', name, params);
   }
 
   var clarityLoaded = false;
   function loadClarity() {
-    if (clarityLoaded || !CLARITY_ID) return;
+    if (clarityLoaded || !CLARITY_ID || !isProduction) return;
     clarityLoaded = true;
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
@@ -125,6 +141,8 @@
     try {
       var p = new URLSearchParams(location.search).get('lang');
       if (p && B[p]) return p;
+      var pageLanguage = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+      if (pageLanguage && B[pageLanguage]) return pageLanguage;
       var st = localStorage.getItem('co-lang');
       if (st && B[st]) return st;
     } catch (e) {}
@@ -197,7 +215,7 @@
     msg.appendChild(document.createTextNode(t.msg + ' '));
     var link = document.createElement('a');
     link.className = 'co-consent-link';
-    link.href = 'privacy.html';
+    link.href = '/privacy.html';
     link.textContent = t.privacy;
     msg.appendChild(link);
 
@@ -215,8 +233,11 @@
     function close() { if (bar.parentNode) bar.parentNode.removeChild(bar); }
     decline.addEventListener('click', function () {
       var reload = analyticsLoaded || clarityLoaded;
+      choice = 'denied';
       setStored('denied');
+      window['ga-disable-' + GA_ID] = true;
       denyConsent();
+      clearAnalyticsCookies();
       if (window.clarity) {
         window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
         window.clarity('consent', false);
@@ -225,6 +246,7 @@
       if (reload) location.reload();
     });
     accept.addEventListener('click', function () {
+      choice = 'granted';
       setStored('granted');
       loadAnalytics();
       loadClarity();
@@ -275,10 +297,11 @@
       'nav-cta':  'nav',
       'btn-primary': 'hero',
       'btn-band': 'mid_band',
-      'btn-white': 'bottom_cta'
+      'btn-white': 'bottom_cta',
+      'cta-btn': 'article'
     };
     document.querySelectorAll('a[href*="' + CWS + '"]').forEach(function (a) {
-      var location = 'footer';
+      var location = a.closest('main') ? 'article' : 'footer';
       for (var cls in locationMap) {
         if (a.classList.contains(cls)) { location = locationMap[cls]; break; }
       }
