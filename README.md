@@ -96,6 +96,11 @@ privacy links, guide CTA events, withdrawal and previews without sending analyti
 - 2026-10-20: Reuse the shared consent script on the guides and label their CTA clicks
   `article`; separate page-specific trackers would drift. Keep preview hosts out of
   production measurement and permit withdrawal from every page.
+- 2026-11-11: Keep `ad_storage`, `ad_user_data` and `ad_personalization` denied, also after
+  Accept. The banner only asks for analytics cookies and the site runs no Google Ads. GA4's
+  tag diagnostics therefore shows "Urgent: 0% consent rate detected in some regions". That
+  warning is about ad signals only and is expected. Rejected: granting ad consent on Accept,
+  because the banner never asked for it and it would undercut the privacy-first positioning.
 
 ## About this repo
 
