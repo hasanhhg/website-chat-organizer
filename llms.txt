@@ -20,6 +20,7 @@
 - [How to organize Claude chats](https://chat-organizer.com/how-to-organize-claude-chats.html): Step-by-step guide to sorting Claude.ai chats into projects, manually and automatically.
 - [How to organize ChatGPT chats](https://chat-organizer.com/how-to-organize-chatgpt-chats.html): Step-by-step guide to sorting ChatGPT conversations into Projects.
 - [How to find old ChatGPT conversations](https://chat-organizer.com/how-to-find-old-chatgpt-conversations.html): How to search ChatGPT history, recover archived chats, and never lose a conversation again.
+- [Best AI chat organizers compared](https://chat-organizer.com/best-ai-chat-organizer.html): Seven ways to organize ChatGPT and Claude chats compared on platforms, method (auto-sort or manual folders), where the order is stored, and price.
 - [Privacy Policy](https://chat-organizer.com/privacy.html): Exactly what data is and is not handled.
 - [Changelog](https://chat-organizer.com/changelog.html): Release history.
 

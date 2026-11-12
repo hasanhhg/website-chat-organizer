@@ -18,7 +18,7 @@ def commands(page, command):
 def main():
     sitemap = ElementTree.parse(ROOT / "sitemap.xml")
     urls = [node.text for node in sitemap.findall(".//{*}url/{*}loc")]
-    assert len(urls) == 19
+    assert len(urls) == 20
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         context = browser.new_context()
@@ -54,7 +54,7 @@ def main():
         assert tag_requests == []
 
         for url in urls:
-            if "/how-to-" not in url:
+            if "/how-to-" not in url and "/best-" not in url:
                 continue
             context.clear_cookies()
             page = context.new_page()
@@ -92,7 +92,7 @@ def main():
         page.locator('main a[href*="chromewebstore.google.com"]').first.click()
         assert len([r for r in commands(page, "event") if r[1] == "add_to_chrome"]) == 1
         browser.close()
-    print("PASS: 19 pages, 13 translated privacy links, three article goals, refusal, withdrawal, blocked storage and preview protection; no analytics sent.")
+    print("PASS: 20 pages, 13 translated privacy links, four article goals, refusal, withdrawal, blocked storage and preview protection; no analytics sent.")
 
 
 if __name__ == "__main__":

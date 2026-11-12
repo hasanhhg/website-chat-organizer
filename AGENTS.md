@@ -2,12 +2,12 @@
 
 ## Handover, read this first
 
-Updated: 2026-10-20, Codex
+Updated: 2026-11-12, Claude
 
-- Done: Consent, article goals and campaign labels pass browser checks on all 19 pages.
+- Done: comparison page best-ai-chat-organizer.html is live; the build now keeps the sitemap entry and per-language Store labels.
 - Busy: nothing.
-- Next: Google can process the requested guide indexing; future Store sessions will show the complete campaign labels.
-- Watch: Store installs are measured in a separate property; the extension is a separate repo.
+- Next: around 2026-12-10 compare its Search Console clicks with the baseline under Lessons in the README.
+- Watch: the guides say re-running reaches older chats, but the code only lists the 200 newest; verify before repeating it.
 
 The README describes the GitHub Pages site, event names, campaign links and browser verification.
 

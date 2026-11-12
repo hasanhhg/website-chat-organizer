@@ -26,6 +26,7 @@ into the right project and cleaning up empty projects automatically.
 - [How to organize Claude.ai chats](https://chat-organizer.com/how-to-organize-claude-chats.html)
 - [How to organize ChatGPT chats](https://chat-organizer.com/how-to-organize-chatgpt-chats.html)
 - [How to find old ChatGPT conversations](https://chat-organizer.com/how-to-find-old-chatgpt-conversations.html)
+- [Best AI chat organizers compared](https://chat-organizer.com/best-ai-chat-organizer.html)
 - [Privacy policy](https://chat-organizer.com/privacy.html)
 - [Changelog](https://chat-organizer.com/changelog.html)
 
@@ -33,7 +34,8 @@ into the right project and cleaning up empty projects automatically.
 
 GA4 measurement ID `G-EZG37BF12B`. `consent.js` loads Google Analytics and Microsoft
 Clarity only after a visitor clicks Accept (Consent Mode v2, choice in localStorage
-`co-consent`). All 19 sitemap pages include the shared script, including the three guides.
+`co-consent`). All 20 sitemap pages include the shared script, including the three guides
+and the comparison page.
 Local previews never load either measurement service. Visitors can reopen Cookie settings
 and withdraw consent; withdrawal clears analytics cookies and reloads the page.
 
@@ -91,8 +93,35 @@ Run `node --check consent.js` and `python check-analytics.py` (Python Playwright
 Chromium installed). The browser check covers consent on all sitemap pages, translated
 privacy links, guide CTA events, withdrawal and previews without sending analytics.
 
+## Lessons (read before similar work)
+
+**Build**
+- `build_i18n.py` owns the 13 `/{lang}/index.html` pages AND `sitemap.xml`. Edit `index.html`,
+  then run the build; never hand-edit its output. A new page goes into the list in
+  `write_sitemap()`, or the next build silently drops it from the sitemap (happened 2026-11-12).
+- The per-language `utm_content` labels (`nl-hero`, `ar-nav`) were once hand-edited into the
+  output, so a rebuild reset them to `index-*`. The build now writes them itself (2026-11-12).
+  After every build, `git diff --ignore-cr-at-eol` should show only what you meant to change.
+- A new page also goes into `llms.txt` and the page count in `check-analytics.py`.
+
+**Growth**
+- 3 of 4 Store installs come from this website (Store GA4 property 536839144, `install` by
+  `sessionSource`), not from Store search. Site traffic is the lever. Measured 2026-11-12:
+  106 of 140 installs in 28 days came from chat-organizer.com, 14 from chatgpt.com.
+- Search Console impressions for "best ...", "chrome extension for ...", "... tools" went to the
+  homepage at position 4 to 8 with zero clicks: wrong page type for that intent. That is why
+  `best-ai-chat-organizer.html` exists.
+- Facts about rival tools come only from their own Store listing or pricing page, with the
+  check date on the page. Recheck them every three months; prices change.
+
 ## Decisions
 
+- 2026-11-12: Added one honest comparison page (`best-ai-chat-organizer.html`) for the
+  "best AI chat organizer" searches, with a "we make Chat Organizer" disclosure and Chat
+  Organizer's own limits listed. Rejected: rewriting the homepage title for CTR (no evidence the
+  title was the problem) and several near-duplicate "X alternative" pages (thin, and Google
+  treats them as one topic). No FAQ or HowTo markup on it: Google no longer shows those results.
+  Review its clicks against this baseline around 2026-12-10.
 - 2026-10-20: Reuse the shared consent script on the guides and label their CTA clicks
   `article`; separate page-specific trackers would drift. Keep preview hosts out of
   production measurement and permit withdrawal from every page.
