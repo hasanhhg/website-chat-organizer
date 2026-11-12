@@ -226,6 +226,15 @@ def build_lang(base_html, lang, t, langs):
                 continue
             tag[attr] = "../" + v
 
+    # --- Store links: label the campaign with this page's language ---------
+    # index.html says utm_content=index-<button>; a localized page must say
+    # <lang>-<button>, or every Store visit from it is credited to the English
+    # homepage. These labels were added by hand on 2026-10-20 and a rebuild
+    # silently reset them, so the build now owns them.
+    for a in soup.find_all("a", href=True):
+        if "chromewebstore.google.com" in a["href"]:
+            a["href"] = a["href"].replace("utm_content=index-", f"utm_content={lang}-")
+
     return soup.decode()
 
 
@@ -245,7 +254,8 @@ def write_sitemap(langs):
     entries += [(f"{ORIGIN}/{p}", "0.8", "monthly") for p in (
         "how-to-organize-claude-chats.html",
         "how-to-organize-chatgpt-chats.html",
-        "how-to-find-old-chatgpt-conversations.html")]
+        "how-to-find-old-chatgpt-conversations.html",
+        "best-ai-chat-organizer.html")]
     entries += [(f"{ORIGIN}/privacy.html", "0.5", "yearly"),
                 (f"{ORIGIN}/changelog.html", "0.4", "monthly")]
 
